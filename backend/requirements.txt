@@ -1,0 +1,8 @@
+Django==4.2.7
+djangorestframework
+pandas
+reportlab
+djangorestframework-simplejwt
+gunicorn
+whitenoise
+django-cors-headers
