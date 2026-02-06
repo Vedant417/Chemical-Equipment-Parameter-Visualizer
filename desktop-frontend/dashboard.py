@@ -61,12 +61,12 @@ class DashboardWindow(QWidget):
         left_header.addWidget(QLabel(f"Username: {user.get('username', 'User')}"))
         left_header.addWidget(QLabel(f"Email: {user.get('email', '')}"))
 
-        # ✅ STATUS LABEL (CREATE FIRST)
+        # STATUS LABEL (CREATE FIRST)
         self.status_label = QLabel("📂 Upload a CSV file to view analytics")
         self.status_label.setStyleSheet("color:#4ade80; font-weight:bold;")
         left_header.addWidget(self.status_label)
 
-        # ✅ LOGOUT BUTTON
+        # LOGOUT BUTTON
         logout_btn = QPushButton("🚪 Logout")
         logout_btn.setFixedWidth(120)
         logout_btn.clicked.connect(self.logout)
@@ -187,8 +187,6 @@ class DashboardWindow(QWidget):
         header.setSectionResizeMode(QHeaderView.Stretch)
         header.setHighlightSections(False)
 
-
-
         # ---------- TABLE BEHAVIOR ----------
         self.history_table.verticalHeader().setVisible(False)
         self.history_table.setEditTriggers(QTableWidget.NoEditTriggers)
@@ -226,7 +224,6 @@ class DashboardWindow(QWidget):
             background-color: rgba(34,197,94,0.25);
         }
         """)
-
 
         history_layout.addWidget(title)
         history_layout.addWidget(self.history_table)
